@@ -30,7 +30,7 @@ scenario:
     - create
     - converge
     - idempotence
-    - verify
+    # - verify
     - destroy
 verifier:
   name: testinfra

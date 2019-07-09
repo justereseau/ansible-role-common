@@ -31,3 +31,5 @@ base_packages:
   - sysstat
   - tcpdump
   - vim
+
+ntp_service: ntp

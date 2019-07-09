@@ -15,6 +15,6 @@
 
 - name: Enable ntp.
   service:
-     name: ntp
+     name: "{{ ntp_service }}"
      state: started
      enabled: true

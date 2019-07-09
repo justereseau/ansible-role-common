@@ -1,7 +1,4 @@
 ---
-- name: Including default ntp-server list.
-  include_vars: "{{ ansible_os_family }}_base_packages.yml"
-
 - name: Install base packages
   package:
     name: "{{ item }}"

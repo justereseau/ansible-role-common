@@ -1,0 +1,31 @@
+---
+base_packages:
+  - autoconf
+  - autoconf-archive
+  - autogen
+  - automake
+  - bash-completion
+  - bind-utils
+  - ca-certificates
+  - curl
+  - dstat
+  - gcc
+  - git
+  - gnupg2
+  - htop
+  - iftop
+  - lm_sensors
+  - make
+  - man
+  - mlocate
+  - mtr
+  - ncdu
+  - net-snmp
+  - net-snmp-utils
+  - net-tools
+  - python-pip
+  - python34-setuptools
+  - sudo
+  - sysstat
+  - tcpdump
+  - vim

@@ -1,41 +1,13 @@
 ---
+- name: Including default ntp-server list.
+  include_vars: "{{ ansible_os_family }}_base_packages.yml"
+
 - name: Install base packages
   package:
     name: "{{ item }}"
     state: present
     update_cache: true
-  with_items:
-    - apt-transport-https
-    - ca-certificates
-    - curl
-    - git
-    - vim
-    - htop
-    - sudo
-    - gnupg2
-    - python-pip
-    - python3-pip
-    - gcc
-    - make
-    - autoconf
-    - autoconf-archive
-    - autogen
-    - automake
-    - pkg-config
-    - lm-sensors
-    - dstat
-    - sysstat
-    - snmp
-    - mtr
-    - ncdu
-    - tcpdump
-    - python-dev
-    - net-tools
-    - locate
-    - man
-    - bash-completion
-    - dnsutils
-    - iftop
+  with_items: "{{ base_packages }}"
 
 - name: Install ESXI VM Tools
   package:

@@ -1,2 +1,6 @@
 ---
-# handlers file for linux-motd
+- name: restart ntp
+  service:
+    name: ntp
+    state: restarted
+    enabled: true

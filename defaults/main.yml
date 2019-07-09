@@ -1,2 +1,14 @@
 ---
-# All your roles default values.
+
+# DNS Related vars
+RESOLV_NAMESERVERS:
+  - 1.1.1.1
+  - 1.0.0.1
+RESOLV_SEARCH: []
+RESOLV_SORTLIST: []
+RESOLV_OPTIONS: []
+
+# Define if need vm guest tools.
+# Can be `ESXi` ; `Proxmox` ; or `none`
+# (Work with Redhat And Debian)
+COMMOM_VM_HOST: none

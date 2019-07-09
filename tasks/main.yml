@@ -1,2 +1,10 @@
 ---
-# TODO: Set the role installation tasks.
+- include: repo-non-free.yml
+  when: ansible_distribution == 'Debian'
+- include: backports.yml
+  when: ansible_distribution == 'Debian'
+- include: "base-packages.yml"
+- include: ntp-client.yml
+- include: set-dns.yml
+  when: ansible_distribution == 'Debian'
+- include: timezone.yml

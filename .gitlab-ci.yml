@@ -7,7 +7,7 @@ image: docker:stable
 variables:
   DOCKER_HOST: tcp://docker:2375/
   DOCKER_DRIVER: overlay2
-  ROLE_NAME: linux-motd
+  ROLE_NAME: common
   MOLECULE_DISTRO: debian9
 
 services:
@@ -25,4 +25,3 @@ test:
     - molecule --version
     - ansible --version
     - molecule test
-

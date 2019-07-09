@@ -1,5 +1,4 @@
 ---
-
 # DNS Related vars
 RESOLV_NAMESERVERS:
   - 1.1.1.1
@@ -7,6 +6,7 @@ RESOLV_NAMESERVERS:
 RESOLV_SEARCH: []
 RESOLV_SORTLIST: []
 RESOLV_OPTIONS: []
+RESOLV_DOMAIN: ''
 
 # Define if need vm guest tools.
 # Can be `ESXi` ; `Proxmox` ; or `none`

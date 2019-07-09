@@ -1,8 +1,8 @@
 ---
 galaxy_info:
-  author: # TODO: Set your name
-  description: # TODO: Set the role description
-  company: DreamHack Canada Inc.
+  author: sonic
+  description: This role deploy bases packages and shits to an ansible managed host.
+  company: djls
 
   license: WTFPL
 

@@ -4,7 +4,7 @@ services: docker
 
 env:
   global:
-    - ROLE_NAME: # TODO: Set the role description
+    - ROLE_NAME: common
   matrix:
     - MOLECULE_DISTRO: centos7
     - MOLECULE_DISTRO: ubuntu1804

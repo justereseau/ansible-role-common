@@ -3,3 +3,4 @@
   template:
      src: set-dns/resolv.conf.j2
      dest: /etc/resolv.conf
+  tags: molecule-notest

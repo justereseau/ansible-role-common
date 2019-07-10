@@ -2,3 +2,4 @@
 - name: Set the system timezone to America/Montreal.
   timezone:
     name: America/Toronto
+  tags: molecule-notest

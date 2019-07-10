@@ -1,5 +1,5 @@
 ---
 - name: Set the system timezone to America/Montreal.
   timezone:
-    name: America/Toronto
+    name: America/Montreal
   tags: molecule-notest

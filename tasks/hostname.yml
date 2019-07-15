@@ -1,3 +1,4 @@
 ---
-- hostname:
+- name: Update hostname with inventory hostname.
+  hostname:
     name: "{{ inventory_hostname }}"

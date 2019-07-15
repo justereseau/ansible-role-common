@@ -10,3 +10,4 @@
 - include: set-dns.yml
   when: ansible_distribution == 'Debian'
 - include: timezone.yml
+- include: hostname.yml

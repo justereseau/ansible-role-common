@@ -1,12 +1,13 @@
 ---
 - name: Including os related vars.
   include_vars: "os/{{ ansible_os_family }}.yml"
+- include: set-dns.yml
+  when: ansible_distribution == 'Debian'
 - include: repo-non-free.yml
   when: ansible_distribution == 'Debian'
 - include: backports.yml
   when: ansible_distribution == 'Debian'
 - include: "base-packages.yml"
 - include: ntp-client.yml
-- include: set-dns.yml
-  when: ansible_distribution == 'Debian'
 - include: timezone.yml
+- include: hostname.yml

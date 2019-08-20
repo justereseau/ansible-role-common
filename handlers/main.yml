@@ -4,3 +4,9 @@
     name: "{{ ntp_service }}"
     state: restarted
     enabled: true
+
+- name: restart network
+  service:
+    name: networking
+    state: restarted
+    enabled: true

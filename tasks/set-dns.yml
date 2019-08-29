@@ -1,5 +1,4 @@
 ---
----
 - name: Unlock resolv.conf
   file:
     path: /etc/resolv.conf

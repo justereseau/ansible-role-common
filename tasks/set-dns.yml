@@ -9,8 +9,8 @@
 
 - name: Configure resolv.conf
   template:
-     src: set-dns/resolv.conf.j2
-     dest: /etc/resolv.conf
+    src: set-dns/resolv.conf.j2
+    dest: /etc/resolv.conf
   tags: molecule-notest
   notify: restart network
 

@@ -1,5 +1,7 @@
 ---
 galaxy_info:
+  role_name: common
+
   author: sonic
   description: This role deploy bases packages and shits to an ansible managed host.
   company: djls

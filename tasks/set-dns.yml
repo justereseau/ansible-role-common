@@ -1,10 +1,25 @@
 ---
+---
+- name: Unlock resolv.conf
+  file:
+    path: /etc/resolv.conf
+    attr: e
+  when: RESOLV_LOCK
+  changed_when: false
+
 - name: Configure resolv.conf
   template:
      src: set-dns/resolv.conf.j2
      dest: /etc/resolv.conf
   tags: molecule-notest
   notify: restart network
+
+- name: Lock resolv.conf
+  file:
+    path: /etc/resolv.conf
+    attr: i
+  when: RESOLV_LOCK
+  changed_when: false
 
 - name: Execute handler
   meta: flush_handlers

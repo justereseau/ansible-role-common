@@ -8,6 +8,9 @@ RESOLV_SORTLIST: []
 RESOLV_OPTIONS: []
 RESOLV_DOMAIN: ''
 
+# Set /etc/resolv.conf read-only with the `i` file attibute
+RESOLV_LOCK: false
+
 # Define if need vm guest tools.
 # Can be `ESXi` ; `Proxmox` ; or `none`
 # (Work with Redhat And Debian)

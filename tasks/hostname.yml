@@ -1,7 +1,7 @@
 ---
 - name: Update hostname with inventory hostname.
   hostname:
-    name: {{ inventory_hostname | regex_replace('\.[-a-zA-Z0-9_.]*') }}
+    name: "{{ inventory_hostname | regex_replace('\\.[-a-zA-Z0-9_.]*') }}"
   tags: molecule-notest
 
 - name: Fix /etc/hosts removing the old hostname

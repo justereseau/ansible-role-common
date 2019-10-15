@@ -7,7 +7,7 @@
   when: ansible_distribution == 'Debian'
 - include: backports.yml
   when: ansible_distribution == 'Debian'
-- include: "base-packages.yml"
+- include: base-packages.yml
 - include: ntp-client.yml
 - include: timezone.yml
 - include: hostname.yml

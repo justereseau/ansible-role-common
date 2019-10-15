@@ -11,11 +11,11 @@
     name: open-vm-tools
     state: present
     update_cache: true
-  when: COMMOM_VM_HOST == "ESXi"
+  when: COMMOM_VM_HOST == "VMware"
 
-- name: Install ESXI VM Tools
+- name: Install kvm (Proxmox) VM Tools
   package:
     name: qemu-guest-agent
     state: present
     update_cache: true
-  when: COMMOM_VM_HOST == "Proxmox"
+  when: COMMOM_VM_HOST == "kvm"

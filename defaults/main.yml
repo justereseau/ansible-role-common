@@ -12,6 +12,6 @@ RESOLV_DOMAIN: ''
 RESOLV_LOCK: false
 
 # Define if need vm guest tools.
-# Can be `ESXi` ; `Proxmox` ; or `none`
+# Can be `VMware` ; `kvm` ; or `none`
 # (Work with Redhat And Debian)
-COMMOM_VM_HOST: none
+COMMOM_VM_HOST: " {{ ansible_virtualization_type | default("none") }} "

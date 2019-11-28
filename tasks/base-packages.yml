@@ -4,18 +4,18 @@
     name: "{{ item }}"
     state: present
     update_cache: true
-  with_items: "{{ base_packages }}"
+  with_items: "{{ COMMON_BASE_PACKAGES }}"
 
 - name: Install ESXI VM Tools
   package:
     name: open-vm-tools
     state: present
     update_cache: true
-  when: COMMOM_VM_HOST == "VMware"
+  when: COMMON_VM_HOST == "VMware"
 
 - name: Install kvm (Proxmox) VM Tools
   package:
     name: qemu-guest-agent
     state: present
     update_cache: true
-  when: COMMOM_VM_HOST == "kvm"
+  when: COMMON_VM_HOST == "kvm"

@@ -13,23 +13,14 @@ base_packages:
   - gcc
   - git
   - gnupg2
-  - htop
-  - iftop
-  - lm-sensors
   - locate
   - make
-  - man
-  - mtr
   - ncdu
-  - net-tools
   - pkg-config
   - python-dev
   - python-pip
   - python3-pip
-  - snmp
   - sudo
-  - sysstat
-  - tcpdump
   - vim
 
 ntp_service: ntp

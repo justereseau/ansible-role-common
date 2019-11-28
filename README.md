@@ -33,7 +33,7 @@ COMMON_VM_HOST: none
 
 - `RESOLV_DOMAIN`:
 
-- `COMMON_VM_HOST`: Define if this is a and need vm guest tools. Can be `ESXi` ; `Proxmox` ; or `none`
+- `COMMON_VM_HOST`: Define if this is a and need vm guest tools. Can be `VMware` ; `kvm` ; or `none`
 
 ## License
 

@@ -4,7 +4,7 @@
     name: "{{ item }}"
     state: present
     update_cache: true
-  with_items: "{{ base_packages }}"
+  with_items: "{{ COMMON_BASE_PACKAGES }}"
 
 - name: Install ESXI VM Tools
   package:

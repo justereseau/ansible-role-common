@@ -14,10 +14,6 @@ base_packages:
   - gnupg2
   - make
   - mlocate
-  - ncdu
-  - python-pip
-  - python34-setuptools
-  - sudo
   - vim
 
 ntp_service: ntpd

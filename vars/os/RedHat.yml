@@ -15,6 +15,7 @@ base_packages:
   - make
   - mlocate
   - vim
+  - python3
 
 ntp_service: ntpd
 

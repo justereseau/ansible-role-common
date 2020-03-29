@@ -17,4 +17,5 @@ RESOLV_LOCK: false
 COMMON_VM_HOST: "{{ ansible_virtualization_type | default('none') }}"
 
 # Define the base programs to install on the hosts
+COMMON_DEPLOY_BASE_PACKAGES: true
 COMMON_BASE_PACKAGES: "{{ base_packages }}"

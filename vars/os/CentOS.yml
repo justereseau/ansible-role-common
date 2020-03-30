@@ -14,4 +14,4 @@ base_packages:
   - mlocate
   - vim
 
-ntp_service: ntpd
+chrony_deamon: chronyd

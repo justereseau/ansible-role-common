@@ -23,4 +23,4 @@ base_packages:
   - sudo
   - vim
 
-chrony_deamon: chronyd
+chrony_deamon: chrony

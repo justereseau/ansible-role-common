@@ -1,8 +1,6 @@
 ---
 base_packages:
   - autoconf
-  - autoconf-archive
-  - autogen
   - automake
   - bash-completion
   - bind-utils

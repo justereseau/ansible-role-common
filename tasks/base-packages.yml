@@ -1,10 +1,21 @@
 ---
+- name: Add the Debian required repositories.
+  apt_repository:
+    repo: "{{ item.repo }}"
+    filename: "{{ item.file }}"
+    state: present
+  with_items:
+    - repo: deb http://deb.debian.org/debian/ stretch-backports main contrib non-free
+      file: backports
+    - repo: deb http://deb.debian.org/debian/ stretch non-free
+      file: non-free
+  when: ansible_distribution == 'Debian'
+
 - name: Install base packages
   package:
-    name: "{{ item }}"
+    name: "{{ COMMON_BASE_PACKAGES }}"
     state: present
     update_cache: true
-  with_items: "{{ COMMON_BASE_PACKAGES }}"
 
 - name: Install ESXI VM Tools
   package:

@@ -1,0 +1,22 @@
+---
+- name: Install ntp.
+  package:
+    name: chrony
+    state: present
+
+- name: Configure ntp.
+  template:
+    src: ntp/chrony.conf.j2
+    dest: /etc/chrony.conf
+  notify: restart chronyd
+
+- name: Enable chronyd.
+  service:
+    name: "{{ chrony_deamon }}"
+    state: started
+    enabled: true
+
+- name: Set the system timezone to America/Montreal.
+  timezone:
+    name: "{{ COMMON_TIMEZONE | default('America/Montreal') }}"
+  tags: molecule-notest

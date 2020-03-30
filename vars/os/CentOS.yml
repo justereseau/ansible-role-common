@@ -1,26 +1,17 @@
 ---
 base_packages:
-  - apt-transport-https
   - autoconf
-  - autoconf-archive
-  - autogen
   - automake
   - bash-completion
+  - bind-utils
   - ca-certificates
   - curl
-  - dnsutils
   - dstat
   - gcc
   - git
   - gnupg2
-  - locate
   - make
-  - ncdu
-  - pkg-config
-  - python-dev
-  - python-pip
-  - python3-pip
-  - sudo
+  - mlocate
   - vim
 
 chrony_deamon: chronyd

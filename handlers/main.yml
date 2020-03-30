@@ -1,7 +1,7 @@
 ---
-- name: restart ntp
+- name: restart chronyd
   service:
-    name: "{{ ntp_service }}"
+    name: "{{ chrony_deamon }}"
     state: restarted
     enabled: true
 

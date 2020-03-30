@@ -17,4 +17,15 @@ RESOLV_LOCK: false
 COMMON_VM_HOST: "{{ ansible_virtualization_type | default('none') }}"
 
 # Define the base programs to install on the hosts
+COMMON_DEPLOY_BASE_PACKAGES: true
 COMMON_BASE_PACKAGES: "{{ base_packages }}"
+
+# NTP variables
+COMMON_DEPLOY_NTP: true
+COMMON_NTP_POOL:
+  - 0.debian.pool.ntp.org
+  - 1.debian.pool.ntp.org
+  - 2.debian.pool.ntp.org
+  - 3.debian.pool.ntp.org
+
+COMMON_TIMEZONE: America/Montreal

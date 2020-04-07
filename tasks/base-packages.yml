@@ -13,7 +13,7 @@
 
 - name: Install base packages
   package:
-    name: "{{ COMMON_BASE_PACKAGES }}"
+    name: "{{ COMMON_BASE_PACKAGES | default(base_packages) }}"
     state: present
     update_cache: true
 

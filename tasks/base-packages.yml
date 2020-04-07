@@ -5,9 +5,9 @@
     filename: "{{ item.file }}"
     state: present
   with_items:
-    - repo: deb http://deb.debian.org/debian/ stretch-backports main contrib non-free
+    - repo: deb http://deb.debian.org/debian/ {{ ansible_distribution_release }}-backports main contrib non-free
       file: backports
-    - repo: deb http://deb.debian.org/debian/ stretch non-free
+    - repo: deb http://deb.debian.org/debian/ {{ ansible_distribution_release }} non-free
       file: non-free
   when: ansible_distribution == 'Debian'
 

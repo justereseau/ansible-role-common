@@ -3,14 +3,14 @@
   ini_file:
     path: /etc/NetworkManager/NetworkManager.conf
     state: present
-    no_extra_spaces: yes
+    no_extra_spaces: true
     section: main
     option: dns
     value: none
     owner: root
     group: root
     mode: 0644
-    backup: yes
+    backup: true
   when: ansible_os_family == 'RedHat'
   notify:
     - Reload Networking
@@ -19,9 +19,9 @@
   file:
     path: /etc/resolv.conf
     attr: e
-  when: 
-      - RESOLV_LOCK
-      - ansible_os_family == 'Debian'
+  when:
+    - RESOLV_LOCK
+    - ansible_os_family == 'Debian'
   changed_when: false
 
 - name: Configure resolv.conf
@@ -31,18 +31,18 @@
     owner: root
     group: root
     mode: 0644
-    backup: yes
+    backup: true
   tags: molecule-notest
   when: ansible_os_family == 'Debian' or ansible_os_family == 'RedHat'
-  notify:  Reload Networking
+  notify: Reload Networking
 
 - name: Lock resolv.conf
   file:
     path: /etc/resolv.conf
     attr: i
-  when: 
-      - RESOLV_LOCK
-      - ansible_os_family == 'Debian'
+  when:
+    - RESOLV_LOCK
+    - ansible_os_family == 'Debian'
   changed_when: false
 
 - name: Execute handler

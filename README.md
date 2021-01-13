@@ -1,4 +1,4 @@
-# Ansible Role: Common [![Build Status](https://travis-ci.org/lucasmaurice/ansible-role-common.svg?branch=master)](https://travis-ci.org/lucasmaurice/ansible-role-common)
+# Ansible Role: Common [![Build Status](https://travis-ci.com/justereseau/ansible-role-common.svg?branch=master)](https://travis-ci.com/justereseau/ansible-role-common)
 
 This role deploy bases packages and shits on a **Debian** or a **RedHat** host.
 

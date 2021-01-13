@@ -1,23 +1,48 @@
 ---
+- name: make sure line 'dns=none' is set in /etc/NetworkManager/NetworkManager.conf
+  ini_file:
+    path: /etc/NetworkManager/NetworkManager.conf
+    state: present
+    no_extra_spaces: yes
+    section: main
+    option: dns
+    value: none
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+  when: ansible_os_family == 'RedHat'
+  notify:
+    - Reload Networking
+
 - name: Unlock resolv.conf
   file:
     path: /etc/resolv.conf
     attr: e
-  when: RESOLV_LOCK
+  when: 
+      - RESOLV_LOCK
+      - ansible_os_family == 'Debian'
   changed_when: false
 
 - name: Configure resolv.conf
   template:
     src: set-dns/resolv.conf.j2
     dest: /etc/resolv.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
   tags: molecule-notest
-  notify: restart network
+  when: ansible_os_family == 'Debian' or ansible_os_family == 'RedHat'
+  notify:  Reload Networking
 
 - name: Lock resolv.conf
   file:
     path: /etc/resolv.conf
     attr: i
-  when: RESOLV_LOCK
+  when: 
+      - RESOLV_LOCK
+      - ansible_os_family == 'Debian'
   changed_when: false
 
 - name: Execute handler

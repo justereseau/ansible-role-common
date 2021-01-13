@@ -1,5 +1,6 @@
 ---
 # DNS Related vars
+COMMON_DEPLOY_RESOLVE: true
 RESOLV_NAMESERVERS:
   - 1.1.1.1
   - 1.0.0.1

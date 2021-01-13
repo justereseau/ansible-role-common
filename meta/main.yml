@@ -31,15 +31,10 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-        - 9
-        - 10
-    - name: CentOS
+        - buster
+    - name: EL
       versions:
         - 8
-    - name: Ubuntu
-      versions:
-        - 16.04
-        - 18.04
 
   galaxy_tags: []
   # List tags for your role here, one per line. A tag is a keyword that describes

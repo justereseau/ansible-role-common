@@ -12,3 +12,4 @@
   when: COMMON_DEPLOY_NTP
 
 - include: hostname.yml
+  when: COMMON_DEPLOY_HOSTNAME

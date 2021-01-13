@@ -30,3 +30,5 @@ COMMON_NTP_POOL:
   - 3.debian.pool.ntp.org
 
 COMMON_TIMEZONE: America/Montreal
+
+COMMON_DEPLOY_HOSTNAME: true

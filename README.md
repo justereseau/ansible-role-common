@@ -2,38 +2,19 @@
 
 This role deploy bases packages and shits on a **Debian** or a **RedHat** host.
 
+## Shits intalled
+
+- [DNS and Resolve config](tasks/set-dns.yml) (If COMMON_DEPLOY_RESOLVE = true, default: true)
+
+- [Base packages](tasks/base-packages.yml) (If COMMON_DEPLOY_BASE_PACKAGES = true, default: true)
+
+- [NTP Provider](tasks/ntp.yml) (If COMMON_DEPLOY_NTP = true, default: true)
+
+- [Hostname and domain name](tasks/hostname.yml) (If COMMON_DEPLOY_HOSTNAME = true, default: true)
+
 ## Role Variables
 
-Available variables are listed below, along with default values (see defaults/main.yml):
-
-```yaml
----
-# DNS Related vars
-RESOLV_NAMESERVERS:
-  - 1.1.1.1
-  - 1.0.0.1
-RESOLV_SEARCH: []
-RESOLV_SORTLIST: []
-RESOLV_OPTIONS: []
-RESOLV_DOMAIN: ''
-
-# Define if need vm guest tools.
-# Can be `ESXi` ; `Proxmox` ; or `none`
-COMMON_VM_HOST: none
-
-```
-
-- `RESOLV_NAMESERVERS`: The list of nameserver to install.
-
-- `RESOLV_SEARCH`:
-
-- `RESOLV_SORTLIST`:
-
-- `RESOLV_OPTIONS`:
-
-- `RESOLV_DOMAIN`:
-
-- `COMMON_VM_HOST`: Define if this is a and need vm guest tools. Can be `VMware` ; `kvm` ; or `none`
+See [defaults/main.yml](defaults/main.yml):
 
 ## License
 

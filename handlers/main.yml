@@ -5,8 +5,14 @@
     state: restarted
     enabled: true
 
-- name: restart network
+- name: Reload Networking
   service:
     name: networking
     state: restarted
-    enabled: true
+  when: ansible_os_family == 'Debian'
+
+- name: Reload Networking
+  service:
+    name: NetworkManager
+    state: reloaded
+  when: ansible_os_family == 'RedHat'

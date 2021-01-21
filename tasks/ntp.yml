@@ -8,6 +8,9 @@
   template:
     src: ntp/chrony.conf.j2
     dest: /etc/chrony.conf
+    owner: root
+    group: root
+    mode: 0644
   notify: restart chronyd
 
 - name: Enable chronyd.

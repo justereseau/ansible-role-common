@@ -3,7 +3,7 @@
   include_vars: "os/{{ ansible_distribution }}.yml"
 
 - include: set-dns.yml
-  when: ansible_distribution == 'Debian'
+  when: COMMON_DEPLOY_RESOLVE
 
 - include: "base-packages.yml"
   when: COMMON_DEPLOY_BASE_PACKAGES
@@ -12,3 +12,4 @@
   when: COMMON_DEPLOY_NTP
 
 - include: hostname.yml
+  when: COMMON_DEPLOY_HOSTNAME

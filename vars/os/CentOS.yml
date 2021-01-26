@@ -1,5 +1,6 @@
 ---
 base_packages:
+  - epel-release
   - autoconf
   - automake
   - bash-completion

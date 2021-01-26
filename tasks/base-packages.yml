@@ -11,6 +11,13 @@
       file: non-free
   when: ansible_distribution == 'Debian'
 
+- name: Install EPEL
+  package:
+    name: epel-release
+    state: present
+    update_cache: true
+  when: ansible_distribution == 'CentOS'
+
 - name: Install base packages
   package:
     name: "{{ COMMON_BASE_PACKAGES | default(base_packages) }}"
